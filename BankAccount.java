@@ -224,3 +224,13 @@ public class BankAccount {
 //########################################################################################################################
 //Q2
 //BankAccount manages account state, performing account operations and getter functions.
+
+//########################################################################################################################
+// Q5
+/*
+5 classes remain: BankAccount, AccountRepository, NotificationService, StatementGenerator, and Main. 
+It's easier to test because each class has one responsibility only.
+Each class can be tested independently. 
+Changes to DB notification or statement generation dont affect account operations in BankAccount.
+This makes code easy to maintain adn test
+*/
