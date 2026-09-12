@@ -203,3 +203,7 @@ public class BankAccount {
 //2. Interest rates: If interest rates change then modification of function calculateInterest is needed
 //3. PIN validation: If PIN validation rules change (eg length) then modification of function setPin is needed
 //4. Notification: If notification method changes (eg email provider) then modifification of function sendEmail is needed
+
+//########################################################################################################################
+//Q2
+//BankAccount manages account state, performing account operations and getter functions.
