@@ -21,7 +21,8 @@ public class BankAccount {
 
     // Every deposit/withdrawal gets logged here as a plain string —
     // logging logic is mixed directly into deposit()/withdraw().
-    private List<String> transactionLog = new ArrayList<>();
+    //Not needed anymore
+    //private List<String> transactionLog = new ArrayList<>();
 
     public BankAccount(int accountNumber, String name, int age, double balance, String accountType) {
 
@@ -65,13 +66,16 @@ public class BankAccount {
         balance += amount;
 
         // Logging responsibility, baked directly into deposit()
-        transactionLog.add("DEPOSIT: Rs. " + amount + " | New balance: " + balance);
+        //Not needed anymore
+        //transactionLog.add("DEPOSIT: Rs. " + amount + " | New balance: " + balance);
 
         // Notification responsibility, baked directly into deposit()
-        sendEmail(name, "Your deposit of Rs. " + amount + " was successful. New balance: " + balance);
+        //Remove this method
+        //sendEmail(name, "Your deposit of Rs. " + amount + " was successful. New balance: " + balance);
 
         // Persistence responsibility, baked directly into deposit()
-        saveToDatabase();
+        //Remove this method
+        //saveToDatabase();
 
         return true;
     }
@@ -103,11 +107,14 @@ public class BankAccount {
 
         balance -= amount;
 
-        transactionLog.add("WITHDRAW: Rs. " + amount + " | New balance: " + balance);
+        //Not needed anymore
+        //transactionLog.add("WITHDRAW: Rs. " + amount + " | New balance: " + balance);
 
-        sendEmail(name, "Your withdrawal of Rs. " + amount + " was successful. New balance: " + balance);
+        //Remove this method
+        //sendEmail(name, "Your withdrawal of Rs. " + amount + " was successful. New balance: " + balance);
 
-        saveToDatabase();
+        //Remove this method
+        //saveToDatabase();
 
         return true;
     }
@@ -115,16 +122,20 @@ public class BankAccount {
     public boolean closeAccount() {
         if (status.equals("Inactive")) return false;
         status = "Inactive";
-        sendEmail(name, "Your account has been closed.");
-        saveToDatabase();
+        //Remove this method
+        //sendEmail(name, "Your account has been closed.");
+        //Remove this method
+        //saveToDatabase();
         return true;
     }
 
     public boolean reopenAccount() {
         if (status.equals("Active")) return false;
         status = "Active";
-        sendEmail(name, "Your account has been reopened.");
-        saveToDatabase();
+        //Remove this method
+        //sendEmail(name, "Your account has been reopened.");
+        //Remove this method
+        //saveToDatabase();
         return true;
     }
 
@@ -157,25 +168,31 @@ public class BankAccount {
     // ----------------------------------------------------
     // "Persistence" — pretend database logic living inside the account
     // ----------------------------------------------------
-
+    /* 
+    //Remove this method
     private void saveToDatabase() {
         // Pretend this talks to MySQL. In reality just prints.
         System.out.println("[DB] Saving account " + accountNumber + " to MySQL...");
-    }
+    } */
 
     // ----------------------------------------------------
     // "Notification" — pretend email logic living inside the account
     // ----------------------------------------------------
 
+    /*
+    //Remove this method
     private void sendEmail(String recipient, String message) {
         // Pretend this talks to an SMTP server. In reality just prints.
         System.out.println("[EMAIL] To: " + recipient + " | " + message);
     }
+    */
 
     // ----------------------------------------------------
     // "Statement generation" — formatting logic living inside the account
     // ----------------------------------------------------
 
+    //Remove this method
+    /*
     public void printStatement() {
         System.out.println("---- Statement for Account #" + accountNumber + " (" + name + ") ----");
         for (String entry : transactionLog) {
@@ -183,7 +200,7 @@ public class BankAccount {
         }
         System.out.println("Current Balance: Rs. " + balance);
         System.out.println("-----------------------------------------------------");
-    }
+    } */
 
     // ----------------------------------------------------
     // Getters
