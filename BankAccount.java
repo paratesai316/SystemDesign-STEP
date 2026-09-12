@@ -197,3 +197,9 @@ public class BankAccount {
     public String getAccountType() { return accountType; }
     public boolean hasPin() { return pin != null; }
 }
+//########################################################################################################################
+//Q1
+//1. Database: If database changes then modification of function saveToDatabase is needed 
+//2. Interest rates: If interest rates change then modification of function calculateInterest is needed
+//3. PIN validation: If PIN validation rules change (eg length) then modification of function setPin is needed
+//4. Notification: If notification method changes (eg email provider) then modifification of function sendEmail is needed
